@@ -2,11 +2,7 @@ const express = require('express')
 const routes = require('./routes')
 const db = require('./db')
 
-db.then(payload => {
-  console.log('database connected')
-}).catch(error => {
-  console.log(error)
-})
+db.catch(console.log)
 
 const app = express()
 
